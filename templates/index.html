@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="static/styles.css">
+        <title>
+            Mesa Assignment 
+        </title>
+    </head>
+    <body>
+        <h1>Roadmap to your career goals</h1>
+        <h3>Please enter your Information</h3>
+        <!--this is the route and method that the form will use-->
+        <div class="main">
+            <center>
+                <form id ="infoForm" action="/" method="POST">
+                    <p>
+                        <label>Name:</label> <br>
+                        <input name="userName" type="text" placeholder="Enter your name here">
+                    </p>
+                    <p>
+                        <label>Email:</label> <br>
+                        <input name="email" type="text" placeholder="Enter your email here">
+                    </p>
+                    
+                    <p>
+                        <label>Years of Experience:</label> <br>
+                        <input name="yoe" type="text" placeholder="Total Years">
+                    </p>
+                    <p>
+                        <label>What are your Prior work experience:</label> <br>
+                        <input name="workex" type="text" placeholder="Work Experience">
+                    </p>
+                    <p>
+                        <label>What are your relevant skils</label> <br>
+                        <input name="skills" type="text" placeholder="Enter your skills here">
+                    </p>
+                    
+                    <p>
+                        <label>What is your dream position:</label> <br>
+                        <input name="pos" type="text" placeholder="Enter your dream position">
+                    </p>
+                    <p>
+                        <label>What is your dream company:</label> <br>
+                        <input name="comp" type="text" placeholder="Enter your dream position">
+                    </p>
+                    <button type="submit" onClick={handleSubmit}>Submit</button>
+
+                </form> 
+            </center>
+        </div>
+        <br>
+
+        <script>
+            function handleSubmit() {
+                document.getElementById('infoForm').submit();
+            }
+        </script>
+
+    </body>
+</html>

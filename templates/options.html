@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Options Page</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: auto; }
+        .option-container { margin-top: 20px; }
+        .text-box { display: none; margin-top: 10px; }
+    </style>
+    <script>
+        function toggleFeedbackBox(checkbox) {
+            // Show or hide the feedback box based on whether "I do not like these options" is checked
+            document.getElementById('text-box').style.display = checkbox.checked ? 'block' : 'none';
+        }
+    </script>
+    
+</head>
+<body>
+    <h1>Choose an Option</h1>
+    <p>{{ summary }}</p>
+    
+    <form action="{{ url_for('finaloutput') }}" method="post">
+        <div class="option-container">
+                <label><input type="checkbox" name="option1" value="option1"> {{ option1 }}</label><br><br>
+                <label><input type="checkbox" name="option2" value="option2"> {{ option2 }}</label><br><br>
+                <label><input type="checkbox" name="option3" value="option3"> {{ option3 }}</label><br><br>
+                <label><input type="checkbox" name="option4" value="option4"> {{ option4 }}</label><br><br>
+            <label>
+                <input type="checkbox" name="option5" value="option5" onclick="toggleFeedbackBox(this)">
+                I do not like these options
+            </label><br>
+        </div>
+        
+        <div id="text-box" class="text-box">
+            <label for="feedback">Please explain why you don't like these options and suggest changes:</label>
+            <textarea name="feedback" id="feedback" rows="4" cols="50"></textarea><br>
+        </div>
+        
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,16 @@
+body {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, sans-serif;
+    text-align: center;
+}
+
+input[name="text"] {
+width:25%;
+height:50px;
+font-size: medium;
+}
+
+input[type="textarea"] {
+width:40%;
+height: 60px;
+word-break: normal;
+}
